@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MeuProjetoAvalonia.MainWindow"
+        Title="Conversor"
+        Width="500" 
+        Height="800">
+
+         <StackPanel Margin="5">
+            <DockPanel Margin="5">
+                <TextBox x:Name="txtInput"
+                        Watermark=""
+                        Margin="5"/>
+
+                <ComboBox x:Name="tiposDeMedidas"
+                        Margin="5"
+                        SelectionChanged="tiposDeMedidas_SelectionChanged">
+                <ComboBoxItem Content="Celsius" />
+                <ComboBoxItem Content="Fahrenheit" />
+                <ComboBoxItem Content="Kelvin" />
+                </ComboBox>
+            </DockPanel>
+
+            <Button Content="Clique Aqui"
+        	HorizontalAlignment="Center"
+        	Click="BtnClique_Click"/>
+
+            <TextBlock x:Name="resultado"
+                        Margin="5">
+            
+            </TextBlock>
+        </StackPanel>
+
+</Window>
